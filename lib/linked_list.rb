@@ -8,7 +8,19 @@ class LinkedList
   end
 
   def nth_from_end(n)
-    # your code here
-  end
+    
+      node = head
+      i = 0
+      until node.nil?
+        node = node.next_node
+        i+=1
+      end
+
+      if n > i || n < 1
+        return nil
+      end
+      byebug
+      node.value
+    end
 
 end
